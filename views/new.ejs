@@ -1,0 +1,26 @@
+<body style="background-color:white;">
+		<h1 class="text-center" style="margin-top:20px;">NEW PRODUCT</h1>
+		<div class="jumbotron container">
+			<form action="/" method="POST">
+			  <div class="form-group">
+			    <label>PRODUCT NAME</label>
+			    <input type="text" class="form-control" name="products[name]" placeholder="PRODUCT NAME">
+			  </div>
+			  <div class="form-group">
+			    <label>PRODUCT NUMBER</label>
+			    <input type="number" name="products[number]" placeholder="STORE ID" class="form-control">
+			  </div>
+			  <div class="form-group">
+			  	<label >PRODUCT PRICE</label>
+			    <input type="number" class="form-control" name="products[price]" placeholder="PRICE">
+			    
+			  </div>
+			  <button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+			<form action="/" method="GET">
+				<button class="float-left btn btn-primary">BACK</button>
+			</form>
+		</div>
+		<link rel="stylesheet" href="bootstrap.css">
+</body>
+

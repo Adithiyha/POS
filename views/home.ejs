@@ -1,0 +1,56 @@
+
+<body style="background-color:white;">
+	<h1 class="text-center">INVENTORY MANAGEMENT</h1>
+	<div class="jumbotron container" style="length:80%;">
+
+		<div class="table-responsive">
+		  <table class="table">
+		    <thead>
+				<tr>
+					<h1><th scope="col">PRODUCT NAME</th></h1>
+					<h1><th scope="col"> PRODUCT PRICE</th></h1>
+					<h1><th scope="col">PRODUCT NUMBER</th></h1>
+				 </tr>
+    		</thead>
+    		<tbody>
+			<% products.forEach(function(product){  %>
+				
+					<tr>
+						<td >
+							<%= product.name %>
+						</td>
+						
+						<td>
+							<%= product.price %>
+						</td>
+						
+						<td>
+							<%= product.number %>
+						</td>
+
+						<td><a href="/<%= product._id %>">SHOW MORE OPTIONS</a></td>
+					</tr>
+				
+
+
+			<% }) %>
+				</tbody>
+			</table>
+		</div>
+		<div>
+			<form action="/new" method="GET">
+				<button class="float-right btn btn-primary">NEW PRODUCT</button>
+			</form>
+		</div>
+		
+		<div>
+			<form action="/billing" method="GET">
+				<button class="float-right btn btn-primary" style="margin-right:5px;">BILLING COUNTER</button>
+			</form>
+		</div>
+		
+	</div>
+
+	
+	<link rel="stylesheet" href="bootstrap.css">
+</body>

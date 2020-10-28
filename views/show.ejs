@@ -1,0 +1,23 @@
+
+
+<body style="background-color:white;">
+	<div class="jumbotron container" style="margin-top:15px;">
+		<h1>PRODUCT NAME:<%= product.name %></h1>
+		<h3>PRODUCT PRICE:<%= product.price %></h3>
+		<h3>PRODUCT NUMBER:<%= product.number %></h3>
+			
+			<form action="/<%= product._id %>/edit" method="GET">
+				<button class="btn btn-warning">MODIFY</button>
+			</form>
+
+			<form action="/<%= product._id %>?_method=DELETE" method="POST">
+				<button class="btn btn-danger">DELETE</button>
+			</form>
+
+			<form action="/" method="GET">
+			<button class="btn btn-dark">HOME</button>
+			</form>
+		
+		<link rel="stylesheet" href="bootstrap.css">
+	</div>
+</body>

@@ -1,0 +1,80 @@
+<body>
+	
+	<h1 class="text-center">BILLING COUNTER</h1>
+	
+	<div class="jumbotron container" style="length:80%;">
+
+		<div class="table-responsive">
+		  <table class="table">
+		    <thead>
+				<tr>
+					<h1><th scope="col">PRODUCT NAME</th></h1>
+					<h1><th scope="col"> PRODUCT PRICE</th></h1>
+					<h1><th scope="col">PRODUCT NUMBER</th></h1>
+					<h1><th scope="col">QUANTITY</th></h1>
+				 </tr>
+    		</thead>
+	    		<tbody>
+	    		
+				<% products.forEach(function(product){  %>
+
+
+						<tr>
+							<td >
+								<%= product.name %>
+							</td>
+							
+							<td>
+								<%= product.price %>
+							</td>
+							
+							<td>
+								<%= product.number %>
+							</td>
+
+							<td>
+								<input type="number" class="qty" value="0">
+							</td>
+						</tr>
+
+			
+				<% }) %>
+				<thead>
+					<tr>
+						<th>TOTAL:</th>
+						<th>-</th>
+						<th>-</th>
+						<th>
+							<span id="total"></span>	
+						</th>
+					</tr>
+				</thead>
+				</tbody>
+			</table>
+		</div>
+		<div>
+			<form action="/" method="GET">
+				<button class="float-right btn btn-primary">BACK</button>
+			</form>
+		</div>
+		<div>
+			<button class="float-right btn btn-primary" id="cal" style="margin-right:7px;">CALCULATE</button>
+		</div>
+	</div>
+
+	<script>
+		var sum=0
+		<% products.forEach(function(product){ %>
+			sum=sum+ <%= product.price %>
+			
+		<% }) %>
+		document.getElementById("total").textContent=sum
+		
+		
+			
+
+	</script>
+
+	
+	<link rel="stylesheet" href="bootstrap.css">
+</body>
